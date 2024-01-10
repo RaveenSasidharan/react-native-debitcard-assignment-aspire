@@ -91,9 +91,8 @@ function Routes() {
     return(
         <NavigationContainer>
         <Stack.Navigator>
-        <Stack.Screen name ="HomeScreen" component ={HomeScreen} options={{headerShown:false}} />
-        <Stack.Screen name  ="ManageLimit" component ={ManageLimit} />
-          
+          <Stack.Screen name ="HomeScreen" component ={HomeScreen} options={{headerShown:false}} />
+          <Stack.Screen name  ="ManageLimit" component ={ManageLimit}  options={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
     );

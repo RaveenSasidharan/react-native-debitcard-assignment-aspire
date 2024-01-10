@@ -2,20 +2,24 @@ import React, { useState }from 'react';
 
 import { View, Text, Image, TouchableOpacity, Switch , StyleSheet} from 'react-native';
 import { Colors } from '../resources/Colors';
+import { useNavigation } from '@react-navigation/native';
 function CardSettingItem({
-    imageIcon,
+  imageIcon,
     title,
     description,
     toggleVisibility,
-    onToggle,
-    onPress,
   }){
+    const navigation = useNavigation();
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => {
       setIsEnabled((previousState) => !previousState);
+      if(isEnabled)
+        navigation.navigate('ManageLimit')
     };
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPress={
+          toggleSwitch
+        }>
           <View style={styles.listItemContainer}>
             {imageIcon}
     

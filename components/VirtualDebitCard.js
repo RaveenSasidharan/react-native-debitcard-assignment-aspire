@@ -17,12 +17,12 @@ function VirtualDebitCard({userName, cardNumber, validThru, cvv }) {
         {showCardNumber ? (
           <View style={styles.topRightElement}>
             <HideCard />
-            <Text style={{ color: 'green' }}>Hide Card Number</Text>
+            <Text style={styles.hideShowText}>Hide Card Number</Text>
           </View>
         ) : (
           <View style={styles.topRightElement}>
             <ShowCard />
-            <Text style={{ color: 'green' }}>Show Card Number</Text>
+            <Text style={styles.hideShowText}>Show Card Number</Text>
           </View>
         )}
       </TouchableOpacity>
@@ -63,13 +63,20 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'flex-start'
   },
+  hideShowText:{
+    color:Colors.green,
+    fontSize:12,
+    marginLeft:5,
+    fontFamily:"AvenirNextLTProDem"
+  },
   topRightElement: {
     top: 10,
     right: 10,
     width: 200,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignSelf: 'flex-end',
-    alignItems: 'flex-start', // Updated to start from the left
+    alignItems: 'center',
+    alignContent:"center" ,
     flexDirection: 'row',
     backgroundColor: 'white',
     padding: 10,

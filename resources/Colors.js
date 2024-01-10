@@ -9,5 +9,6 @@ export const Colors = {
     midnightBlue:"#25345F",
     green:"#01D167",
     brightGreen:"#20D167",
+    brightGreen07:"#20D1670F",
 
 };
