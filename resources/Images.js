@@ -1,23 +1,3 @@
 export const Images = {
-    'account': require("../assets/images/Account.svg"),
-    'card': require("../assets/images/Card.svg"),
-    'commerce': require("../assets/images/Commerce.svg"),
-    'credit': require("../assets/images/Credit.svg"),
-    'deactivatedCards': require("../assets/images/DeactivatedCards.svg"),
-    'deactivatedNormal': require("../assets/images/DeactivatedNormal.svg"),
-    'freezeCard': require("../assets/images/FreezeCard.svg"),
-    'freezeHighlight': require("../assets/images/FreezeHighlight.svg"),
-    'freezeNormal': require("../assets/images/FreezeNormal.svg"),
-    'gauge': require("../assets/images/Gauge.svg"),
-    'hideCard': require("../assets/images/HideCard.svg"),
-    'home': require("../assets/images/Home.svg"),
-    'insight': require("../assets/images/Insight.svg"),
-    'logo': require("../assets/images/Logo.svg"),
-    'newCard': require("../assets/images/NewCard.svg"),
-    'pay': require("../assets/images/Pay.svg"),
-    'payments': require("../assets/images/Payments.svg"),
-    'showCard': require("../assets/images/ShowCard.svg"),
-    'toggle': require("../assets/images/Toggle.svg"),
-    'user': require("../assets/images/User.svg"),
-    'visaLogo': require("../assets/images/VisaLogo.svg")
+    'logoPng': require("../assets/images/Logo.png")
 };

@@ -3,15 +3,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from'@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import SvgUri from 'react-native-svg-uri';
 import {Colors } from '../resources/Colors';
-import {Images} from '../resources/Images'
 import Home from '../screens/Home';
 import Credit from '../screens/Credit';
 import DebitCard from '../screens/DebitCard';
 import Payment from '../screens/Payment';
 import Profile from '../screens/Profile';
 import ManageLimit from '../screens/ManageLimit';
+import Account from "../components/svglogos/Account.js";
+import Payments from "../components/svglogos/Payments.js";
+
+import DeactivatedCards from "../components/svglogos/DeactivatedCards.js";
+import Credits from "../components/svglogos/Credits.js";
+import HomeIcon from "../components/svglogos/Home.js";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -34,12 +38,7 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Home',
              tabBarIcon: ({color, size}) =>(
-                <SvgUri
-                width={size}
-                height={size}
-                source={Images.home}
-                fill={Colors.green}
-              />
+                <HomeIcon/>
              )
         }}/>
          <BottomTabs.Screen name='DebitCard' 
@@ -49,12 +48,7 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Debit Card',
              tabBarIcon: ({color, size}) =>(
-                <SvgUri
-                width={size}
-                height={size}
-                source={Images.deactivatedCards}
-                fill={color}
-              />
+                <DeactivatedCards/>
              )
         }}/>
          <BottomTabs.Screen name='Payment' 
@@ -64,12 +58,7 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Payment',
              tabBarIcon: ({color, size}) =>(
-                <SvgUri
-                width={size}
-                height={size}
-                source={Images.payments}
-                fill={color}
-              />
+                <Payments/>
              )
         }}/>
          <BottomTabs.Screen name='Credit' 
@@ -79,12 +68,7 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Credit',
              tabBarIcon: ({color, size}) =>(
-                <SvgUri
-                width={size}
-                height={size}
-                source={Images.card}
-                fill={color}
-              />
+                <Credits/>
              )
         }}/>
          <BottomTabs.Screen name='Profile' 
@@ -94,12 +78,8 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Profile',
              tabBarIcon: ({color, size}) =>(
-                <SvgUri
-                width={size}
-                height={size}
-                source={Images.account}
-                fill={color}
-              />
+                <Account />
+              
              )
         }}/>
       

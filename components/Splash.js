@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import {Colors} from '../resources/Colors';
 import {Fonts} from '../resources/Fonts';
-function ComingSoon(){
+function Splash(){
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Updating Soon</Text>
+      <Text style={styles.text}>Loading Soon</Text>
     </View>
   );
 };
@@ -23,5 +23,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ComingSoon;
+export default Splash;
 
