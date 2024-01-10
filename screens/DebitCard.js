@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AvailableBalance from "../components/AvailableBalance";
-import { View, Text, StyleSheet, ScrollView, Image,  ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image,  ActivityIndicator, Dimensions } from 'react-native';
 import { Colors } from "../resources/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DebitCardModal from "../components/DebitCardModal";
@@ -27,13 +27,17 @@ function DebitCard(){
       {isLoading && <ActivityIndicator size="large" color="#0000ff" />}
       {error && <Text>Error: {error}</Text>}
       {debitCard && (
-        <ScrollView>
-              
+        <View style={styles.container}>  
+        <ScrollView  
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}>
         <Image source={Images.logoPng}  style = {styles.logo}/>  
         <AvailableBalance balance={spendLimit} />
         <View style={styles.bgImage} />
         <DebitCardModal debitCard={debitCard}/>
+        
         </ScrollView>
+        </View>   
       )}
   </SafeAreaView>);
      
@@ -43,13 +47,18 @@ function DebitCard(){
 const styles = StyleSheet.create({
     safeArea:{
       flexGrow: 1,
-      backgroundColor: Colors.backgroundBlue
+      backgroundColor: Colors.backgroundBlue,
+      margin:0
     },
     logo: {
       alignSelf: 'flex-end',
       marginEnd: 16,
       marginTop: 26
     },
+    container: {
+      height: Dimensions.get('window').height,
+      width: "100%"
+  },
     bgImage: {
       backgroundColor: Colors.white,
       height: "100%",

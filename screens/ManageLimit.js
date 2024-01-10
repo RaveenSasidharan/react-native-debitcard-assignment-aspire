@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, TextInput, Image, SafeAreaView} from 'react-native';
 import { Colors } from '../resources/Colors';
-import Gauge from "../components/svglogos/Gauge.js";
+import GaugeDarkBlue from "../components/svglogos/GaugeDarkBlue.js";
 import { Images } from '../resources/Images.js';
 import DollarComponent from "../components/DollarComponent.js";
+import Back from "../components/svglogos/Back.js";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux'
@@ -20,16 +21,14 @@ function ManageLimit(){
             <View style={styles.container}>
         <View style = {styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <Icon name="ios-arrow-back"
-           size={30}
-            color="white" />
+          <Back />
         </TouchableOpacity>
         <Image source={Images.logoPng}  style = {styles.logoButton}/>  
             </View>
         <Text style={styles.title}>Spending limit</Text>
         <View style={styles.roundedView}>
             <View style={styles.gaugeContainer}>
-                <Gauge style={styles.gaugeIcon}/>
+                <GaugeDarkBlue style={styles.gaugeIcon}/>
                 <Text style={styles.gaugeIconText}>Set a weekly debit card spending limit</Text>
             </View>
             <View style={styles.inputContainer}>
@@ -99,7 +98,6 @@ const styles =  StyleSheet.create({
         flexDirection:'row',
         justifyContent:"space-between",
         alignItems:"center",
-        marginTop:20
     },
     info:{
         marginLeft: 10,
@@ -122,7 +120,7 @@ const styles =  StyleSheet.create({
         marginLeft: 10,
         fontSize: 24,
         color:Colors.white,
-        marginTop:20,
+        marginTop:25,
         marginLeft:24,
         fontFamily: 'AvenirNextLTProBold',
     },
@@ -135,11 +133,11 @@ const styles =  StyleSheet.create({
         borderTopRightRadius: 24,
     },
     gaugeIcon:{
-        width: 16,
-        height: 16,
+        width: 20,
+        height: 20,
     },
     gaugeIconText:{
-        marginLeft: 10,
+        marginLeft: 15,
         fontSize: 14,
         color:Colors.charcoalBlack,
         fontFamily: 'AvenirNextLTProMedium',

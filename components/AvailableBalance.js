@@ -10,7 +10,7 @@ function AvailableBalance({balance}){
             <Text style = {styles.cardTitle}>Debit Card</Text>
             <Text style = {styles.balaceTitle}>Available Balance</Text>
             <View style = {styles.pricePanel}>
-                <DollarComponent verticalPadding={4}/>
+                <DollarComponent verticalPadding={2}/>
                 <Text style = {styles.pricePanelText}>{balance}</Text>
             </View>
         </View>
@@ -40,9 +40,10 @@ const styles = StyleSheet.create({
     },
     pricePanelText:{
         color: Colors.white,
-        fontSize: 24,
+        fontSize: 25,
+        marginTop:2,
         alignItems: 'center',
-        marginStart: 20,
+        marginStart: 10,
         fontFamily: 'AvenirNextLTProBold',
     },
 

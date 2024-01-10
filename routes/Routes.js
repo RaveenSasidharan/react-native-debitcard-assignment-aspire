@@ -13,7 +13,7 @@ import ManageLimit from '../screens/ManageLimit';
 import Account from "../components/svglogos/Account.js";
 import Payments from "../components/svglogos/Payments.js";
 
-import DeactivatedCards from "../components/svglogos/DeactivatedCards.js";
+import DebitCardSvg from "../components/svglogos/DebitCardSvg.js";
 import Credits from "../components/svglogos/Credits.js";
 import HomeIcon from "../components/svglogos/Home.js";
 
@@ -48,7 +48,7 @@ function  HomeScreen(){
             headerShown: false,
              tabBarLabel:'Debit Card',
              tabBarIcon: ({color, size}) =>(
-                <DeactivatedCards/>
+                <DebitCardSvg/>
              )
         }}/>
          <BottomTabs.Screen name='Payment' 

@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
       borderRadius: 4,
       paddingHorizontal: 10,
       alignItems: 'center',
+      justifyContent:'center'
     },
     text: {
       fontFamily: 'AvenirNextLTProBold',
