@@ -27,6 +27,6 @@ Develop a React native application with two screen
 - npm buid && npm run ios/android
 
 # Screenshots
-<img src="screenshots/scrrenshot1.png" height=300> <img src="screenshots/scrrenshot2.png" height=300> <img src="screenshots/scrrenshot3.png" height=300> <img src="screenshots/scrrenshot4.png" height=300>
+<img src="screenshots/scrrenshot1.png" height=300>  <img src="screenshots/scrrenshot2.png" height=300>  <img src="screenshots/scrrenshot3.png" height=300>  <img src="screenshots/scrrenshot4.png" height=300>
 
 
