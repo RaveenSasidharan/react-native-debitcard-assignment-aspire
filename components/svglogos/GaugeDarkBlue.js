@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { G, Circle, Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { G, Circle, Path } from "react-native-svg";
 
 function GaugeDarkBlue(props) {
   return (
@@ -35,7 +35,7 @@ function GaugeDarkBlue(props) {
         />
       </G>
     </Svg>
-  )
+  );
 }
 
 export default GaugeDarkBlue;

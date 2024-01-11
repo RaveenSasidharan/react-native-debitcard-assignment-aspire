@@ -1,27 +1,27 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import {Colors} from '../resources/Colors';
-import {Fonts} from '../resources/Fonts';
-function Splash(){
+import React from "react";
+import { View, Image, StyleSheet } from "react-native";
+import { Colors } from "../resources/Colors";
+import { Images } from "../resources/Images";
+import { Fonts } from "../resources/Fonts";
+function Splash() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Loading Soon</Text>
+      <Image source={Images.logoPng} style={styles.logo} />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.backgroundBlue,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  text: {
-    color: Colors.white,
-    fontSize: 16,
+  logo: {
+    width: 50,
+    height: 50,
   },
 });
 
 export default Splash;
-

@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { G, Circle, Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { G, Circle, Path } from "react-native-svg";
 const DeactivatedCards = (props) => (
   <Svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} {...props}>
     <G transform="translate(213 -305)">

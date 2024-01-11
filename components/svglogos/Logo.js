@@ -2,7 +2,12 @@ import * as React from "react";
 import Svg, { Defs, Path, G } from "react-native-svg";
 
 const Logo = (props) => (
-  <Svg xmlns="http://www.w3.org/2000/svg" width="25.595" height="25" viewBox="0 0 25.595 25">
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="25.595"
+    height="25"
+    viewBox="0 0 25.595 25"
+  >
     <Defs>
       <G>
         <Path

@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { Colors } from '../resources/Colors';
-import HideCard from '../components/svglogos/HideCard';
-import ShowCard from '../components/svglogos/ShowCard';
-import AspireLogo from '../components/svglogos/AspireLogo';
-import VisaLogo from '../components/svglogos/VisaLogo';
+import React, { useState } from "react";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Colors } from "../resources/Colors";
+import HideCard from "../components/svglogos/HideCard";
+import ShowCard from "../components/svglogos/ShowCard";
+import AspireLogo from "../components/svglogos/AspireLogo";
+import VisaLogo from "../components/svglogos/VisaLogo";
+import { Strings } from "../resources/Strings";
 
-function VirtualDebitCard({userName, cardNumber, validThru, cvv }) {
+function VirtualDebitCard({ userName, cardNumber, validThru, cvv }) {
   const [showCardNumber, setShowCardNumber] = useState(false);
   const cardParts = cardNumber.match(/.{1,4}/g) || [];
 
@@ -17,39 +18,43 @@ function VirtualDebitCard({userName, cardNumber, validThru, cvv }) {
         {showCardNumber ? (
           <View style={styles.topRightElement}>
             <HideCard />
-            <Text style={styles.hideShowText}>Hide Card Number</Text>
+            <Text style={styles.hideShowText}>{Strings.hideCard}</Text>
           </View>
         ) : (
           <View style={styles.topRightElement}>
             <ShowCard />
-            <Text style={styles.hideShowText}>Show Card Number</Text>
+            <Text style={styles.hideShowText}>{Strings.showCard}</Text>
           </View>
         )}
       </TouchableOpacity>
 
       {/* Debit Card View */}
       <View style={styles.cardView}>
-      <View style={styles.aspireLogo}>
+        <View testID="aspireLogo" style={styles.aspireLogo}>
           <AspireLogo />
         </View>
         {/* User Info */}
         <View style={styles.userInfo}>
           <Text style={styles.userName}>{userName}</Text>
-          <View style={styles.cardContainer}>
+          <View testID="cardContainer" style={styles.cardContainer}>
             {cardParts.map((part, index) => (
               <View key={index} style={styles.cardNumberContainer}>
-                <Text style={styles.cardNumber}>{showCardNumber || index >= 3 ? part : '●●●●'}</Text>
+                <Text style={styles.cardNumber}>
+                  {showCardNumber || index >= 3 ? part : "●●●●"}
+                </Text>
               </View>
             ))}
           </View>
-          
+
           <View style={styles.cardInfoRow}>
             <Text style={styles.validThruText}>Thru: {validThru}</Text>
-            <Text style={styles.cvvText}>CVV: {showCardNumber ? cvv : '***'}</Text>
+            <Text style={styles.cvvText}>
+              CVV: {showCardNumber ? cvv : "***"}
+            </Text>
           </View>
         </View>
-        
-        <View style={styles.visaLogo}>
+
+        <View testID="visaLogo" style={styles.visaLogo}>
           <VisaLogo />
         </View>
       </View>
@@ -60,25 +65,25 @@ function VirtualDebitCard({userName, cardNumber, validThru, cvv }) {
 const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    flex:1,
-    justifyContent:'flex-start'
+    flex: 1,
+    justifyContent: "flex-start",
   },
-  hideShowText:{
-    color:Colors.green,
-    fontSize:12,
-    marginLeft:5,
-    fontFamily:"AvenirNextLTProDem"
+  hideShowText: {
+    color: Colors.green,
+    fontSize: 12,
+    marginLeft: 5,
+    fontFamily: "AvenirNextLTProDemi",
   },
   topRightElement: {
     top: 10,
     right: 10,
     width: 200,
-    justifyContent: 'center',
-    alignSelf: 'flex-end',
-    alignItems: 'center',
-    alignContent:"center" ,
-    flexDirection: 'row',
-    backgroundColor: 'white',
+    justifyContent: "center",
+    alignSelf: "flex-end",
+    alignItems: "center",
+    alignContent: "center",
+    flexDirection: "row",
+    backgroundColor: "white",
     padding: 10,
     paddingVertical: 15,
     marginEnd: 10,
@@ -86,66 +91,66 @@ const styles = StyleSheet.create({
   },
   cardView: {
     flex: 1, // Updated to use row layout
-    justifyContent: 'space-between', 
+    justifyContent: "space-between",
     padding: 20,
     borderRadius: 8,
     backgroundColor: Colors.green,
     marginHorizontal: 16,
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: 10,
   },
   aspireLogo: {
-    alignSelf:'flex-end'
+    alignSelf: "flex-end",
   },
   userInfo: {
-    alignItems: 'flex-start', // Align user info to the start
+    alignItems: "flex-start", // Align user info to the start
     marginBottom: 20,
   },
   userName: {
     color: Colors.white,
-    marginTop:24,
-    alignSelf:'flex-start',
+    marginTop: 24,
+    alignSelf: "flex-start",
     fontSize: 22,
     letterSpacing: 0.53,
-    marginLeft:2,
-    fontFamily:'AvenirNextLTProBold',
+    marginLeft: 2,
+    fontFamily: "AvenirNextLTProBold",
     marginBottom: 5,
   },
   cardNumber: {
     color: Colors.white,
-    marginTop:24,
+    marginTop: 24,
     fontSize: 14,
-    marginEnd:10,
+    marginEnd: 10,
     letterSpacing: 3.64,
-    fontFamily:'AvenirNextLTProDem',
+    fontFamily: "AvenirNextLTProDemi",
   },
   cardContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   cardNumberContainer: {
     marginHorizontal: 5,
   },
   cardInfoRow: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 5,
   },
   validThruText: {
     color: Colors.white,
-    marginTop:15,
+    marginTop: 15,
     fontSize: 14,
-    marginLeft:2,
-    fontFamily:'AvenirNextLTProDem',
+    marginLeft: 2,
+    fontFamily: "AvenirNextLTProDemi",
   },
   cvvText: {
     color: Colors.white,
-    marginTop:15,
+    marginTop: 15,
     fontSize: 14,
     marginLeft: 32,
-    fontFamily:'AvenirNextLTProDem',
+    fontFamily: "AvenirNextLTProDemi",
   },
   visaLogo: {
-    alignSelf: 'flex-end', // Align VisaLogo to the end
+    alignSelf: "flex-end", // Align VisaLogo to the end
   },
 });
 

@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { Defs, Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { Defs, Path } from "react-native-svg";
 /* SVGR has dropped some elements not supported by react-native-svg: style */
 const Pay = (props) => (
   <Svg xmlns="http://www.w3.org/2000/svg" width={24} height={18.075} {...props}>

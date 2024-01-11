@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
 
 function Back(props) {
   return (
@@ -10,10 +10,12 @@ function Back(props) {
       width={24}
       {...props}
     >
-      <Path d="M640-80L240-480l400-400 71 71-329 329 329 329-71 71z" 
-       fill="#FFFFFF"/>
+      <Path
+        d="M640-80L240-480l400-400 71 71-329 329 329 329-71 71z"
+        fill="#FFFFFF"
+      />
     </Svg>
-  )
+  );
 }
 
-export default Back
+export default Back;

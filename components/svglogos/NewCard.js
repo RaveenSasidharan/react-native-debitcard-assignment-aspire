@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { G, Circle, Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { G, Circle, Path } from "react-native-svg";
 
 function NewCard(props) {
   return (
@@ -30,7 +30,7 @@ function NewCard(props) {
         />
       </G>
     </Svg>
-  )
+  );
 }
 
 export default NewCard;
